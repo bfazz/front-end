@@ -8,35 +8,50 @@
   <title>Travels and Fun</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li>Places</li>
-        <li>Prices</li>
-        <li>Contact</li>
-      </ul>
+  <header class="container-fluid p-2 bg-warning" >
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Travel & Fun</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Place</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Price</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+      </div>
     </nav>
     <h1>Travel Agency</h1>
   </header>
-  <section>
+  <section class="container-fluid bg-light text-center">
     <h2>Come to see different places in the world!</h2>
     <p>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam blanditiis, facere, tempora laborum incidunt voluptate iusto voluptatum tenetur itaque eligendi rem sint laboriosam adipisci eum vitae, quo aliquid atque a.
     </p>
-    <figure>
-      <img src="img/liberty.jpg" alt="Statue of Liberty - NY">
-      <figcaption>Statue of Liberty - NY</figcaption>
-    </figure>
-    <figure>
-      <img src="img/piramidesdoegito.jpg" alt="Egytian pyramid">
-      <figcaption>Egytian pyramid - Cairo</figcaption>
-    </figure>
-    <figure>
-      <img src="img/torre eiffel.jpg" alt="Eiffel Tower">
-      <figcaption>Eiffel Tower - Paris</figcaption>
-    </figure>
+      <div class="row" text-center>
+      <figure class="col">
+        <img src="img/liberty.jpg" alt="Statue of Liberty - NY">
+        <figcaption>Statue of Liberty - NY</figcaption>
+      </figure>
+      <figure class="col" text-center>
+        <img src="img/piramidesdoegito.jpg" alt="Egytian pyramid">
+        <figcaption>Egytian pyramid - Cairo</figcaption>
+      </figure>
+      <figure class="col" text-center>
+        <img src="img/torre eiffel.jpg" alt="Eiffel Tower">
+        <figcaption>Eiffel Tower - Paris</figcaption>
+      </figure>
+    </div>
   </section>
-  <section>
+  <section class="container-fluid bg-light text-center">
     <h2>Prices</h2>
     <p>See the prices</p>
     <table border>
@@ -77,28 +92,88 @@
       </tr>
     </table>
   </section>
-  <section>
+  <section class="container-fluid bg-light text-center">
     <h2>Contact</h2>
-    <form method="GET" action="">
-      <label for="nome">Nome</label>
-      <input type="text" name="nome"><br><br>
+      <form method="GET" action="">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <div class="mb-3">
+            <label class="form-label" for="name">
+              Name:
+            </label>
+            <input type="text" class="form-control" name="name" id="name">
+          </div>
+          <div>
+            <label class="form-label" for="email">
+              Email:
+            </label>
+          <input type="email" class="form-control" name="email" id="email">
+          </div>
+          <div>
+            <label class="form-label" for="depart">
+              Depart:
+            </label>
+          <input type="date" class="form-control" name="depart" id="depart">
+          </div>
+          <div>
+            <label class="form-label" for="return">
+              Return:
+            </label>
+          <input type="date" class="form-control" name="return" id="return">
+          </div>
+          <div>
+            <label class="form-label" for="occupancy">
+              Occupancy
+            </label>
+          <input type="number" class="form-control" name="occupancy" id="occupancy">
+          </div>
+          <button>Salvar</button>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>What services would like to add?</legend>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" name="tickets" value="tickets" id="flights">
+            <label class="form-check-label" for="flights">
+              Tickets
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" name="hotel" value="hotel" id="book-a-place">
+            <label class="form-check-label" for="book-a-place">
+              Hotel
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" name="car" value="car" id="rent-a-car">
+            <label class="form-check-label" for="rent-a-car">
+              Car
+            </label>
+          </div>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Choose your method of payment</legend>
+          <div>
+            <label>
+              <input type="radio" name="CreditCard" value="CreditCard">Credit Card
+            </label>
+          <div>
+          </div>
+            <label>
+              <input type="radio" name="DebitCard" value="DebitCard">Debit Card
+            </label>
+          <div>
+          </div>
+            <label>
+              <input type="radio" name="paypal" value="paypal">Paypal
+            </label>
+          </div>
 
-      <label for="email">Email</label>
-      <input type="email" name="email"><br><br>
-
-      <label for="depart">Depart</label>
-      <input type="date" name="depart" id="depart"><br><br>
-
-      <label for="return">Return</label>
-      <input type="date" name="return" id="return"><br><br>
-
-      <label for="occupancy">Occupancy</label>
-      <input type="number"><br><br>
-
-      <button>Salvar</button>
-    </form>
+        </fieldset>
+      </form>
   </section>
-  <footer>
+  <footer class="container-fluid bg-warning text-center">
     <p>Developed by bfazz</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
